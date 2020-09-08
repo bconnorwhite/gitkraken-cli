@@ -4,7 +4,6 @@ import isAbsolute from "is-absolute";
 import exec, { flagsToArgs } from "@bconnorwhite/exec";
 
 export async function open(path: string = "") {
-  console.log(path.startsWith("/") ? path : join(process.cwd(), path));
   return exec({
     command: "open",
     args: flagsToArgs({
