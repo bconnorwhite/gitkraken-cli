@@ -18,6 +18,7 @@
 
 > CLI to launch GitKraken from a given path.
 
+Currently has only been tested on MacOS, feel free to [submit a pull request to add Windows support.](https://github.com/bconnorwhite/gitkraken-cli)
 
 ## Installation
 
@@ -36,7 +37,7 @@ npm install --global gitkraken-cli
 ### kraken
 
 ```
-Usage: kraken [options] [directory]
+Usage: kraken [options] [path]
 
 open repository with GitKraken
 
@@ -58,18 +59,54 @@ Open target directory in GitKraken:
 kraken path/to/repo
 ```
 
+## API
+
+### Usage
+
+```ts
+import { createCommand } from "commander";
+import openCommand, { openAction, open } from "gitkraken-cli";
+
+// Add kraken to your own commander program:
+program
+  .addCommand(openCommand)
+  // ...
+
+// Add the open action to your own commander command:
+program
+  .name("my-command")
+  .action(openAction);
+
+// Call open programmatically:
+open("path/to/repo").then(() => {
+  // GitKraken is now open...
+});
+```
+
+### Types
+
+```ts
+function open(path?: string): Promise<ExecResult>;
+
+function openAction(path?: string | undefined): Promise<void>
+
+const openCommand: commander.Command;
+```
+
 <br />
 
 <h2>Dependencies<img align="right" alt="dependencies" src="https://img.shields.io/david/bconnorwhite/gitkraken-cli.svg"></h2>
 
 - [@bconnorwhite/exec](https://www.npmjs.com/package/@bconnorwhite/exec): Execute commands while keeping flags easily configurable as an object
 - [commander](https://www.npmjs.com/package/commander): the complete solution for node.js command-line programs
+- [is-absolute](https://www.npmjs.com/package/is-absolute): Returns true if a file path is absolute. Does not rely on the path module and can be used as a polyfill for node.js native `path.isAbolute`.
 
 <br />
 
 <h2>Dev Dependencies<img align="right" alt="David" src="https://img.shields.io/david/dev/bconnorwhite/gitkraken-cli.svg"></h2>
 
 - [@bconnorwhite/bob](https://www.npmjs.com/package/@bconnorwhite/bob): Bob is a toolkit for TypeScript projects
+- [@types/is-absolute](https://www.npmjs.com/package/@types/is-absolute): TypeScript definitions for is-absolute
 
 <br />
 

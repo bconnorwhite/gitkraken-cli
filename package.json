@@ -1,0 +1,39 @@
+{
+  "name": "gitkraken-cli",
+  "version": "1.0.0",
+  "description": "CLI to launch GitKraken from a given path",
+  "license": "MIT",
+  "author": {
+    "name": "Connor White",
+    "email": "connor.bcw@gmail.com",
+    "url": "https://connorwhite.org"
+  },
+  "homepage": "https://connorwhite.org/github/gitkraken-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bconnorwhite/gitkraken-cli.git"
+  },
+  "keywords": [],
+  "files": [
+    "build"
+  ],
+  "main": "./build/index.js",
+  "bin": {
+    "kraken": "./build/bin/index.js"
+  },
+  "scripts": {
+    "build": "bob build",
+    "postversion": "git push",
+    "prepublishOnly": "yarn run build",
+    "test": "node ./build/bin/index.js"
+  },
+  "dependencies": {
+    "@bconnorwhite/exec": "^5.3.0",
+    "commander": "^6.1.0",
+    "is-absolute": "^1.0.0"
+  },
+  "devDependencies": {
+    "@bconnorwhite/bob": "^2.1.0",
+    "@types/is-absolute": "^1.0.0"
+  }
+}
