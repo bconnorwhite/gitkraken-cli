@@ -13,7 +13,17 @@
     "type": "git",
     "url": "git+https://github.com/bconnorwhite/gitkraken-cli.git"
   },
-  "keywords": [],
+  "keywords": [
+    "git",
+    "kraken",
+    "gitkraken",
+    "cli",
+    "open",
+    "launch",
+    "run",
+    "start",
+    "repo"
+  ],
   "files": [
     "build"
   ],
