@@ -1,7 +1,8 @@
 import program from "commander-version";
 import openCommand from "../";
 
-program(__dirname)
+program(__dirname);
+
+openCommand
   .name("kraken")
-  .addCommand(openCommand)
   .parse();
