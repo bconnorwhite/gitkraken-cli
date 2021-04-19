@@ -1,3 +1,13 @@
+## [1.0.4](https://github.com/bconnorwhite/gitkraken-cli/compare/v1.0.3...v1.0.4) (2021-04-19)
+
+
+### Bug Fixes
+
+* add version flag ([186d06a](https://github.com/bconnorwhite/gitkraken-cli/commit/186d06a87c60105421339216afe7ddc7032cc181))
+* capitalize description ([c698f0b](https://github.com/bconnorwhite/gitkraken-cli/commit/c698f0bed3eedd68a801ecbbc499f754c2adacdd))
+
+
+
 ## [1.0.3](https://github.com/bconnorwhite/gitkraken-cli/compare/v1.0.2...v1.0.3) (2021-04-19)
 
 

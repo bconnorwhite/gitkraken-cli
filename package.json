@@ -1,6 +1,6 @@
 {
   "name": "gitkraken-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI to launch GitKraken from a given path",
   "license": "MIT",
   "author": {
