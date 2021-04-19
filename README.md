@@ -45,8 +45,11 @@ Usage: kraken [options] [path]
 Open repository with GitKraken
 
 Options:
-  -v --version  output the version number
-  -h, --help    display help for command
+  -v --version    Output the version number
+  -h --help       Display help for command
+
+Commands:
+  help [command]  Display help for command
 ```
 
 ### Examples
