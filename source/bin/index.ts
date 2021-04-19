@@ -1,12 +1,7 @@
-#!/usr/bin/env node
-import { version } from "../../package.json";
+import program from "commander-version";
 import openCommand from "../";
-import { program } from "commander";
 
-openCommand
+program(__dirname)
   .name("kraken")
-  .version(version, "-v --version")
-  .parse();
-
-program
   .addCommand(openCommand)
+  .parse();

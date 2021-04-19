@@ -1,20 +1,19 @@
 import { join } from "path";
-import { createCommand } from "commander";
+import { createCommand } from "commander-version";
 import isAbsolute from "is-absolute";
-import exec, { flagsToArgs } from "@bconnorwhite/exec";
+import { exec } from "@bconnorwhite/exec";
 
-export async function open(path: string = "") {
-  return exec({
-    command: "open",
-    args: flagsToArgs({
-      a: true
-    }).concat(["GitKraken"]),
-    flags: {
-      new: true,
-      args: '""',
-      path: isAbsolute(path) ? path : join(process.cwd(), path)
-    }
-  });
+export async function open(path = "") {
+  await exec("open", [{ // Open the repo
+    a: true
+  }, "GitKraken", {
+    new: true,
+    args: '""',
+    path: isAbsolute(path) ? path : join(process.cwd(), path)
+  }]);
+  return exec("open", [{ // Focus GitKraken
+    a: true
+  }, "GitKraken"]);
 }
 
 export async function openAction(path?: string) {
