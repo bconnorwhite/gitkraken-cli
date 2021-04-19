@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/bconnorwhite/gitkraken-cli/compare/v1.0.2...v1.0.3) (2021-04-19)
+
+
+### Reverts
+
+* run open by default ([a05c418](https://github.com/bconnorwhite/gitkraken-cli/commit/a05c418d4615416c69d4c614f2f6eb1f26d24628))
+
+
+
 ## [1.0.2](https://github.com/bconnorwhite/gitkraken-cli/compare/v1.0.1...v1.0.2) (2021-04-19)
 
 
