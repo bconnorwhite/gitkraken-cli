@@ -42,7 +42,7 @@ npm install --global gitkraken-cli
 ```
 Usage: kraken [options] [path]
 
-open repository with GitKraken
+Open repository with GitKraken
 
 Options:
   -v --version  output the version number

@@ -21,6 +21,6 @@ export async function openAction(path?: string) {
 }
 
 export default createCommand("open")
-  .description("open repository with GitKraken")
+  .description("Open repository with GitKraken")
   .arguments("[path]")
   .action(openAction);
