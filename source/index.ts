@@ -1,26 +1,20 @@
 import { join } from "path";
-import { createCommand } from "commander-version";
+import clee from "clee";
 import isAbsolute from "is-absolute";
 import { exec } from "@bconnorwhite/exec";
 
-export async function open(path = "") {
-  await exec("open", [{ // Open the repo
-    a: true
-  }, "GitKraken", {
-    new: true,
-    args: '""',
-    path: isAbsolute(path) ? path : join(process.cwd(), path)
-  }]);
-  return exec("open", [{ // Focus GitKraken
-    a: true
-  }, "GitKraken"]);
-}
-
-export async function openAction(path?: string) {
-  open(path);
-}
-
-export default createCommand("open")
+export default clee("kraken")
   .description("Open repository with GitKraken")
-  .arguments("[path]")
-  .action(openAction);
+  .argument("[path]")
+  .action(async (path = process.cwd()) => {
+    await exec("open", [{ // Open the repo
+      a: true
+    }, "GitKraken", {
+      new: true,
+      args: '""',
+      path: isAbsolute(path) ? path : join(process.cwd(), path)
+    }]);
+    await exec("open", [{ // Focus GitKraken
+      a: true
+    }, "GitKraken"]);
+  });

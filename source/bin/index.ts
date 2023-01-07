@@ -1,9 +1,3 @@
-import program from "commander-version";
-import { openAction } from "../";
+import open from "../index.js";
 
-program(__dirname)
-  .name("kraken")
-  .description("Open repository with GitKraken")
-  .arguments("[path]")
-  .action(openAction)
-  .parse();
+open.parse();

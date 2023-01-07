@@ -1,14 +1,12 @@
 {
   "name": "gitkraken-cli",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "CLI to launch GitKraken from a given path",
+  "main": ".auto/build/index.js",
+  "author": "Connor White",
   "license": "MIT",
-  "author": {
-    "name": "Connor White",
-    "email": "connor.bcw@gmail.com",
-    "url": "https://connorwhite.org"
-  },
-  "homepage": "https://connorwhite.org/github/gitkraken-cli",
+  "private": false,
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bconnorwhite/gitkraken-cli.git"
@@ -24,38 +22,42 @@
     "start",
     "repo"
   ],
-  "files": [
-    "build"
-  ],
-  "main": "./build/index.js",
+  "exports": "./.auto/build/index.js",
+  "types": ".auto/build/index.d.js",
   "bin": {
-    "kraken": "./build/bin/index.js"
+    "kraken": ".auto/build/bin/index.js"
+  },
+  "files": [
+    ".auto/build/**/!(tsconfig.tsbuildinfo)"
+  ],
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0"
   },
   "scripts": {
-    "build": "bob build",
-    "commit": "bob commit",
-    "lint": "bob lint",
-    "release": "bob publish",
-    "test": "node ./build/bin/index.js"
+    "build": "auto build",
+    "dev": "auto dev",
+    "lint": "auto lint",
+    "prepack": "yarn build",
+    "release": "auto release",
+    "test": "auto test",
+    "typecheck": "auto typecheck"
   },
   "dependencies": {
     "@bconnorwhite/exec": "^6.0.7",
-    "commander-version": "^2.0.0",
+    "clee": "^0.2.3",
     "is-absolute": "^1.0.0"
   },
   "devDependencies": {
-    "@bconnorwhite/bob": "^2.9.4",
-    "@types/is-absolute": "^1.0.0"
+    "@types/is-absolute": "^1.0.0",
+    "autorepo": "^0.1.7"
   },
   "eslintConfig": {
-    "extends": "eslint-config-bob"
+    "extends": "@autosoft/eslint-config"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "yarn run lint commit"
-    }
+  "jest": {
+    "preset": "@autosoft/jest-preset"
   },
   "npmpackagejsonlint": {
-    "extends": "npm-package-json-lint-config-bob"
+    "extends": "npm-package-json-lint-config-auto"
   }
 }

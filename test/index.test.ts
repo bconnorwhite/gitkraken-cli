@@ -1,8 +1,8 @@
 import { test, expect } from "@jest/globals";
-import { open, openAction } from "../source";
+import open from "../source/index.js";
 
 test("basic", async () => {
-  await openAction();
+  await open(undefined);
 });
 
 test("path", async () => {
