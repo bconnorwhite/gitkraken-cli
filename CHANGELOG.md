@@ -1,3 +1,7 @@
+# [3.0.0](https://github.com/bconnorwhite/gitkraken-cli/compare/v1.0.4...v3.0.0) (2023-01-07)
+
+
+
 ## [1.0.4](https://github.com/bconnorwhite/gitkraken-cli/compare/v1.0.3...v1.0.4) (2021-04-19)
 
 
