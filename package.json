@@ -2,14 +2,17 @@
   "name": "gitkraken-cli",
   "version": "2.0.0",
   "description": "CLI to launch GitKraken from a given path",
-  "main": ".auto/build/index.js",
-  "author": "Connor White",
   "license": "MIT",
   "private": false,
-  "type": "module",
+  "author": "Connor White",
+  "contributors": ["Connor White"],
+  "homepage": "https://connorwhite.dev/github/gitkraken-cli",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bconnorwhite/gitkraken-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bconnorwhite/gitkraken-cli/issues"
   },
   "keywords": [
     "git",
@@ -22,6 +25,8 @@
     "start",
     "repo"
   ],
+  "type": "module",
+  "main": ".auto/build/index.js",
   "exports": "./.auto/build/index.js",
   "types": ".auto/build/index.d.js",
   "bin": {
