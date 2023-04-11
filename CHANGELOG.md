@@ -1,3 +1,12 @@
+## [2.0.4](https://github.com/bconnorwhite/gitkraken-cli/compare/v2.0.3...v2.0.4) (2023-04-11)
+
+
+### Bug Fixes
+
+* bump clee ([ca557fb](https://github.com/bconnorwhite/gitkraken-cli/commit/ca557fb1c6a1bd84111ae75f72ce27abc71877fd))
+
+
+
 ## [2.0.3](https://github.com/bconnorwhite/gitkraken-cli/compare/v2.0.2...v2.0.3) (2023-04-11)
 
 
