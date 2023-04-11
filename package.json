@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@bconnorwhite/exec": "^6.0.7",
-    "clee": "^0.2.5",
+    "clee": "^0.2.6",
     "is-absolute": "^1.0.0"
   },
   "devDependencies": {
