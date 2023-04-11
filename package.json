@@ -1,11 +1,13 @@
 {
   "name": "gitkraken-cli",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "CLI to launch GitKraken from a given path",
   "license": "MIT",
   "private": false,
   "author": "Connor White",
-  "contributors": ["Connor White"],
+  "contributors": [
+    "Connor White"
+  ],
   "homepage": "https://connorwhite.dev/github/gitkraken-cli",
   "repository": {
     "type": "git",

@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/bconnorwhite/gitkraken-cli/compare/v2.0.0...v2.0.1) (2023-04-11)
+
+
+### Bug Fixes
+
+* bump clee ([af28af1](https://github.com/bconnorwhite/gitkraken-cli/commit/af28af149f1a13d10832c637ec3454620087d596))
+
+
+
 # [2.0.0](https://github.com/bconnorwhite/gitkraken-cli/compare/v1.0.4...v3.0.0) (2023-01-07)
 
 * Migrate to ESM
