@@ -1,6 +1,6 @@
 {
   "name": "gitkraken-cli",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "CLI to launch GitKraken from a given path",
   "license": "MIT",
   "private": false,
@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@bconnorwhite/exec": "^6.0.7",
-    "clee": "^0.2.8",
+    "clee": "^0.2.9",
     "is-absolute": "^1.0.0"
   },
   "devDependencies": {
